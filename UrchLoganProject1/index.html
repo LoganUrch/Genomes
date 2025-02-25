@@ -3,63 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affordable Super Mutant Genomes</title>
+    <title>Powerify - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/master-styles.css">
 </head>
 <body>
-    <header class="bg-primary text-white sticky-top py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="text-white text-decoration-none">
-                <img src="images/logo.png" alt="Logo" style="height: 50px;">
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/DNA_background.mp4" type="video/mp4">
+    </video>
+    <header class="text-white sticky-top py-3">
+        <div class="header-left">
+            <a href="index.html">
+                <img src="images/TempLogoPowerify.png" alt="Powerify Logo">
             </a>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="items.html" class="nav-link text-white">
-                            <i class="fas fa-shopping-cart"></i> Browse
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="new.html" class="nav-link text-white">
-                            <i class="fas fa-plus"></i> Sell
-                        </a>
-                    </li>
-                    <li class="nav-item"> <!--TODO, implement Sign Up (prob future assignment)-->
-                        <a href="#" class="nav-link text-white">
-                            <i class="fa fa-user-plus"></i> Sign Up
-                        </a>
-                    </li>
-                    <li class="nav-item"> <!--TODO, implement Login (prob future assignment)-->
-                        <a href="#" class="nav-link text-white">
-                            <i class="fa fa-sign-in"></i> Login
-                        </a>
-                    </li>
-                </ul>
-            </nav>            
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search genomes...">
-                <button class="btn btn-primary">
+            <div class="search-bar">
+                <input type="search" placeholder="Search genomes...">
+                <button>
                     <i class="fas fa-search"></i> Search
-                </button>                
-            </form>
+                </button>
+            </div>
         </div>
+        <nav class="header-right">
+            <a href="items.html"><i class="fas fa-shopping-cart"></i> Browse</a>
+            <a href="new.html"><i class="fas fa-plus"></i> Sell</a>
+            <a href="#"><i class="fas fa-user-plus"></i> Sign Up</a>
+            <a href="#"><i class="fas fa-sign-in"></i> Login</a>
+        </nav>         
     </header>
 
     <main class="container text-center my-5">
-        <h1 class="text-primary">Welcome to Affordable Super Mutant Genomes </h1>
-        <p class="lead">Unlock your inner mutant! Affordable powers for extraordinary people.</p>
-        <a href="items.html" class="btn btn-primary btn-lg">Browse Genomes</a>
+        <h1 class="text-my-5">Welcome to Powerify</h1>
+        <p>Become the Hero of your Dreams!</p>
+        <a href="items.html" class="btn btn-lg">Browse Genomes</a>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Affordable Super Mutant Genomes. All rights reserved.</p>
-        <div>
+    <footer class = "footer">
+        <div class="goleftpls">&copy; 2025 Powerify. All rights reserved.</div>
+        <div class="gorightpls">
             <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="text-white me-3"><i class="fa-brands fa-twitter"></i></a>
             <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
         </div>
-    </footer>    
+    </footer> 
 </body>
 </html>

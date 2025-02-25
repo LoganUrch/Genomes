@@ -1,0 +1,62 @@
+.genome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto; 
+}
+
+.genome-card {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: #ddd;
+    border: 3px solid #4B0082;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    max-width: 1000px; 
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.genome-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #32CD32;
+}
+
+.genome-image {
+    flex: 0 0 35%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.genome-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.genome-info {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.genome-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #32CD32;
+    margin-bottom: 5px;
+}
+
