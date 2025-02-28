@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Mutant Genomes</title>
+    <link rel="icon" type="image/png" href="/images/newlogo_transparent.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master-styles.css">
+    <link rel="stylesheet" href="/css/items.css">
+</head>
+<body>
+    <%- include("partials/header") %>
+
+    <main class="container my-5">
+        <h1 class="text-center text-my-5">Available Mutant Genomes</h1>
+        <p class="text-center lead">Choose your superpower!</p><br>
+
+        <div class="row justify-content-center">
+            <% items.forEach(item => { %>
+                <a href="/items/<%= item.id %>" class="genome-card">
+                    <div class="genome-image">
+                        <img src="<%= item.image %>" alt="<%= item.title %>">
+                    </div>
+                    <div class="genome-info">
+                        <h5 class="genome-title"><%= item.title %></h5>
+                        <p>Condition: <%= item.condition %></p>
+                        <p>Price: $<%= item.price.toLocaleString() %></p>
+                        <p>Total Offers: <%= item.totalOffers %></p>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

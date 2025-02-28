@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item.title %></title>
+    <link rel="icon" type="image/png" href="/images/newlogo_transparent.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master-styles.css">
+    <link rel="stylesheet" href="/css/item.css">
+</head>
+<body>
+    <%- include("partials/header") %>
+    <main class="container">        
+        <div class="item-container">
+            <div class="back-button-container">
+                <a href="/items" class="btn btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Items
+                </a>
+            </div>
+            <div class="item-image">
+                <img src="<%= item.image %>" alt="<%= item.title %>">
+            </div>
+            <div class="item-info">
+                <h1 class="item-title"><%= item.title %></h1>
+                <p class="item-details"><strong>Condition:</strong> <%= item.condition %></p>
+                <p class="item-details"><strong>Price:</strong> $<%= item.price.toLocaleString() %></p>
+                <p class="item-details"><strong>Total Offers:</strong> <%= item.totalOffers %></p>
+                <p class="item-details"><strong>Seller:</strong> <%= item.seller %></p>
+                <p class="item-details"><strong>Description:</strong></p>
+                <p class="item-description"><%= item.description%></p>
+                <div class="item-actions">
+                    <a href="/items/<%= item.id %>/edit" class="btn btn-edit"><i class="fas fa-edit"></i> Edit</a>
+                    <form action="/items/<%= item.id %>/delete" method="POST">
+                        <button type="submit" class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main> 
+
+    <%- include("partials/footer") %>
+</body>
+</html>

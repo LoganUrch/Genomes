@@ -46,8 +46,30 @@ header {
     gap: 15px; 
 }
 
-.header-left img {
-    max-height: 50px;
+.MainLogo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    text-decoration: none;
+}
+
+.MainLogo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.LogoText {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 3px; 
 }
 
 .header-right {
@@ -72,7 +94,8 @@ header {
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    margin-left: 15px;
 }
 
 .search-bar input {

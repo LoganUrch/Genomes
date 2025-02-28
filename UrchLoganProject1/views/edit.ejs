@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item.title %> - Edit</title>
+    <link rel="icon" type="image/png" href="/images/newlogo_transparent.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master-styles.css">
+    <link rel="stylesheet" href="/css/new.css">
+</head>
+<%- include("partials/header") %>
+
+<main class="container">
+    <div class="new-item-container">
+        <div class="back-button-container">
+            <a href="/items/<%= item.id %>" class="btn btn-back">
+                <i class="fas fa-arrow-left"></i> Back to Item
+            </a>
+        </div>
+        <h1 class="form-title">Edit <%= item.title %></h1>
+        <form action="/items/<%= item.id %>/edit" method="POST" class="new-item-form" enctype="multipart/form-data">
+            <label for="title">Genome Name:</label>
+            <input type="text" id="title" name="title" value="<%= item.title %>" required>
+
+            <label for="condition">Condition:</label>
+            <select id="condition" name="condition" required>
+                <option value="Perfected" <%= item.condition === "Perfected" ? "selected" : "" %>>Perfected</option>
+                <option value="Experimental" <%= item.condition === "Experimental" ? "selected" : "" %>>Experimental</option>
+                <option value="Dangerous" <%= item.condition === "Dangerous" ? "selected" : "" %>>Dangerous</option>
+                <option value="Prototype" <%= item.condition === "Prototype" ? "selected" : "" %>>Prototype</option>
+                <option value="Untested" <%= item.condition === "Untested" ? "selected" : "" %>>Untested</option>
+            </select>
+
+            <label for="seller">Seller:</label>
+            <input type="text" id="seller" name="seller" value="<%= item.seller %>" required>
+
+            <label for="price">Price ($):</label>
+            <input type="number" id="price" name="price" value="<%= item.price %>" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required><%= item.description %></textarea>
+
+            <label for="image">Upload New Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit" class="btn btn-submit">Save Changes</button>
+        </form>
+    </div>
+</main>
+
+<%- include("partials/footer") %>
